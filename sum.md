@@ -195,6 +195,35 @@ check if two trees are symmetricz
 
 #### 55 Pascals triangles
 Given a number n, generated n-layer PT, as [[],[],[]]
+- 创建个结果[[]],初始化第一层as[1],然后for loop一层层叠加
+- PS:arraylist和linkedlist都是list interface的具体实现,而stack和queue是linkedlist的子类
+
+#### 56 Pascals triangles 2
+Given an index k, return the kth row of the Pascal's triangle.
+- 一种更易理解的方法:效仿PT1迭代法,只不过result.set(0, tempResult);
+
+#### 219 Palindrome number
+Check if a number is palindrome, with O(1) space. Palindrome: backwards and forwards are the same.
+- 变成char array的方法会让space大于1,所以不能用
+- 当只能操作数值时,黄金方法:通过一直相除找出位数相同的100000值,相除找到第一位数值,%10得出最后一位数值;通过number%1000/10去除首尾两位,10000/100维持循环
+
+```
+int div = 1;
+while (num / div >= 10) div *= 10; // two digits
+
+while (num != 0) { // stop till num is 0, all digits compared
+    int l = num / div; // left digit
+    int r = num % 10; // right digit
+    if (l != r) return false; // compare
+    num = (num % div) / 10; // remove first and last digit
+    div /= 100; // div should be smaller
+}
+```
+
+#### 22 Implement strStr()
+Returns the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
+
+
 
 
 
