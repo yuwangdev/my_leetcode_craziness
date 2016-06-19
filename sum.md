@@ -175,6 +175,29 @@ remove all the item from an array as per the given value, return the new length,
 - 双指针i=0 j=n-1,跑i,如果a[i]==target,把a[j]放到a[i]上,j--; 否则,i++
 - 当题目不要求新的序列顺序时,把最后的元素往前面的位置提,可以是一个不错的方法
 
+#### 34 Remove duplicates from sorted array 
+remove all duplicated elements from a sorted array, and return the new length, in place 
+- O(n) time and O(n) space: HashSet 
+- 时刻谨记木洞排序法!!!!贼好用!, 但是需要O(n)的空间
+- 遇到要求空间O(1)的array相关题目时,经典做法就是双指针,可能会出现a[j]==a[j+1] return j或者i的做法
+- 具体做法:i=0 j=1,j是runner,如果j有重复就一直跑,如果没有重复了,让a[i]=a[j],i是整理后array的最后元素的位置
+- 更好用的方法:只算出来所有重复元素的次数,然后用总长度相减即可
+- 记住了,counter法是奇兵!
+
+#### same tree 
+check if two trees are exactly identical 
+- base case 就是null node 
+
+#### 142 Symmetric tree 
+check if two trees are symmetricz
+- recursion:比较数值,以及n1.left VS n2.right, n1.right VS n2.left
+
+
+#### 55 Pascals triangles
+Given a number n, generated n-layer PT, as [[],[],[]]
+
+
+
 
 
 
