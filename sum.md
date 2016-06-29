@@ -222,6 +222,7 @@ while (num != 0) { // stop till num is 0, all digits compared
 
 #### 22 Implement strStr()
 Returns the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
+- 时刻想着substring的方法,尤其是比较成块成块的string时
 
 
 
