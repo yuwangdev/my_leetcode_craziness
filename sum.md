@@ -1,5 +1,14 @@
 ### Leetcode每日狂刷日志
 
+#### 补遗
+- 求最大小值: return Collections.min(myCollection);   也可以用Arrays
+- 求最大小值的位置: return Collections.indexOf(Collections.min(myCollection));   也可以用Arrays
+- 看一个array是否有重复数值, hashset法保平安: if(!hashset.add(a[i])) return false;
+
+
+
+
+
 #### 1 Rotate array  
 Give an array and k (from the tail) as pivot, rotate. {1,2,3,4,5} and k=2: 45123
 - 最简单是直接拷贝移动
@@ -36,7 +45,7 @@ Convert a sring to 3-line zigzag style
 123 convert to 321 
 - 小心10000或者数据太大overflow的问题
 - 要用long 最后结果(int) longResult
-```
+```java
 res=res*10+data%10
 data/=10
 if res>Integer.MAX_VALUE or res<Integer.MIN_VALUE return 0
@@ -54,7 +63,7 @@ only 1 or 2 steps per time, how many ways to reach n
 - while n-->0： n=1的情况会操作
 - while --n>0: n=1的情况不会操作
 - 计数重复数值的方法：
-```
+```java
 while (index < string.length) {
 	int counter = 1;
 	while (index + 1 < string.length && string[index] == string[index + 1]) {
@@ -66,7 +75,7 @@ while (index < string.length) {
 ```
 
 - int --- string --- char[]
-```
+```java
 String.valueOf(int).toCharArray();
 Integer.parse(string);
 String s = new String(charArray);
@@ -104,7 +113,7 @@ Find the majority element that appears in an array for more than n/2 times
 - Arrays.sort(): quick sort, O(nlogn)
 - 求数列中最长元素的解法:
 
-```
+```java
 int prev = num[0];
 int count = 1;
 for (int i = 1; i < num.length; i++) {
@@ -150,7 +159,7 @@ string convert to integer,类似于integer.parse(String),注意加减号/空白/
 - 遇到大数值的题目,可以用long,最后return (int) longResult;
 - string去除空白: string.trim()
 - 数值题目重要技巧:
-```
+```java
 int result =0;
 while 从头开始多加一位数:
     result=10*result+加的这位数
@@ -207,7 +216,7 @@ Check if a number is palindrome, with O(1) space. Palindrome: backwards and forw
 - 变成char array的方法会让space大于1,所以不能用
 - 当只能操作数值时,黄金方法:通过一直相除找出位数相同的100000值,相除找到第一位数值,%10得出最后一位数值;通过number%1000/10去除首尾两位,10000/100维持循环
 
-```
+```java
 int div = 1;
 while (num / div >= 10) div *= 10; // two digits
 
@@ -223,6 +232,24 @@ while (num != 0) { // stop till num is 0, all digits compared
 #### 22 Implement strStr()
 Returns the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
 - 时刻想着substring的方法,尤其是比较成块成块的string时
+
+#### 103 Merge two sorted linked list 
+Merge two sorted linked list to become a new one as whole 
+- 因为当pointer到了最尾部后回不来最前面,这样就不能最终return了,所以在最开始设一个beforehead=pointer,开始比较后,让pointer.next=xxx,这样最后返回时只需要return beforehead.next即可
+- 步骤:1)做出beforehead=pointer两个指针;2)让pointer跑,哪个小,成为pointer.next;3)当L1和L2有一个null时,把还有的list最后的加在pointer最后即可
+- 一个经典模板:
+```java
+ while (l1 != null && l2 != null) {
+            if (l1.val < l2.val) {
+                pointer.next = l1;
+                l1 = l1.next;
+            } else {
+                pointer.next = l2;
+                l2 = l2.next;
+            }
+            pointer = pointer.next;
+        }
+```
 
 
 
