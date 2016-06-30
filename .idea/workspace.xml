@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="545c9376-09e9-42ad-b6aa-06b357cc0510" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Easy/MergeTwoSortedLinkedList.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Easy/IntersectionOfLinkedList.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Easy/RemoveNthEndFromLinkedList.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Easy/ValidPanlindrome.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Easy/ValidParentheses.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sum.md" afterPath="$PROJECT_DIR$/sum.md" />
     </list>
@@ -32,8 +35,8 @@
         <entry file="file://$PROJECT_DIR$/sum.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor vertical-scroll-proportion="0.10302198">
-                <caret line="5" column="68" selection-start-line="5" selection-start-column="68" selection-end-line="5" selection-end-column="68" />
+              <first_editor vertical-scroll-proportion="0.44368133">
+                <caret line="274" column="84" selection-start-line="274" selection-start-column="84" selection-end-line="274" selection-end-column="84" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -95,6 +98,10 @@
         <option value="$PROJECT_DIR$/src/main/java/Easy/PalindromNumber.java" />
         <option value="$PROJECT_DIR$/src/main/java/Easy/StrStr.java" />
         <option value="$PROJECT_DIR$/src/main/java/Easy/MergeTwoSortedLinkedList.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Easy/IntersectionOfLinkedList.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Easy/RemoveNthEndFromLinkedList.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Easy/ValidPanlindrome.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Easy/ValidParentheses.java" />
         <option value="$PROJECT_DIR$/sum.md" />
       </list>
     </option>
@@ -819,12 +826,12 @@
       <workItem from="1466360666471" duration="8499000" />
       <workItem from="1467079958467" duration="567000" />
       <workItem from="1467153092960" duration="1522000" />
-      <workItem from="1467307118451" duration="2588000" />
+      <workItem from="1467307118451" duration="5173000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28673000" />
+    <option name="totallyTimeSpent" value="31258000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="41" y="23" width="1399" height="877" extended-state="6" />
@@ -1195,11 +1202,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Easy/IntersectionOfLinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8467433">
+          <caret line="60" column="5" selection-start-line="52" selection-start-column="2" selection-end-line="60" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Easy/RemoveNthEndFromLinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4597701">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Easy/ValidPanlindrome.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11494253">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Easy/ValidParentheses.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6704981">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding>
+            <element signature="e#256#267#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sum.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.10302198">
-            <caret line="5" column="68" selection-start-line="5" selection-start-column="68" selection-end-line="5" selection-end-column="68" />
+          <first_editor vertical-scroll-proportion="0.44368133">
+            <caret line="274" column="84" selection-start-line="274" selection-start-column="84" selection-end-line="274" selection-end-column="84" />
             <folding />
           </first_editor>
           <second_editor />

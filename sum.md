@@ -252,7 +252,27 @@ Merge two sorted linked list to become a new one as whole
 ```
 
 
+#### 109 Intersection of two linked list 
+Find out the node of the intersection of two linked list, or return null 
+- 需要齐头并进:先求长度差,让两个head都一致了
 
+#### 114 Remove the Nth node from the end of the linked list 
+1-2-3-4-5 and n=2, return 1-2-3-5
+- 注意去除第一个node的特殊情况
+- 遇到linkedlist in-place并需要return head时,一定是要使用beforeHead方法的
+- 两种方法, 一种是faster/slower法,让faster先跳n步,然后slower faster一起跑知道faster到底,然后slow.next=slow.next.next 
+- 另一种是直接length-n,从头调到目标node之前的那个
+
+
+#### 26 Valid Panlindrome, ignore blank space and case: 镜像对称,注意当string为null的特殊例子
+- Character.isLetterOrDigit(char)
+- string.toLowerCase()
+
+#### 20 Valid parentheses
+check if the string contains complete () or []
+- stack法:时刻记住,如果遇到类似和之前的char比较的题目,stack法是个好办法
+
+#### 105 Remove duplicates from sorted linked list: so that every element is unique 
 
 
 
