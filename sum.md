@@ -5,6 +5,15 @@
 - 求最大小值的位置: return Collections.indexOf(Collections.min(myCollection));   也可以用Arrays
 - 看一个array是否有重复数值, hashset法保平安: if(!hashset.add(a[i])) return false;
 
+#### bit-wise manipulation知识点
+- &: and, |: or, ~: not, ^: xor (两者数值相等为0，数值不等为1)
+- a<<b: a bit-wise向左移动b位，数值上等于a*power(2, b)
+- a>>b: a bit-wise向右移动b位，数值上等于a/power(2, b)
+- >>>: a bit-wise向右移动b位，并且会在最左边补上一个0
+- n<<x或者n>>x的真实目的：获得一个binary representation中，从左或从右开始数第x位的bit数值
+- 数值1的binary representation表示：0x1，表示有31个0外加1个1
+- 整数n转成binary实质算法：找出最接近n的2^x，第x位上就有了个1,然后n=n-2^x，再继续迭代，没有1的位置就是0，一共32位，因为目前假设的电脑位数就是32位
+- binary转成整数：把所有有1的位置x,求sum(2^x)
 
 
 
@@ -308,15 +317,25 @@ for (int i = number.length - 1; i >= 0; i--) {
 ```java
 
 
-
 #### 28 Add Binary
-
-
-
-
+Give two binary string, add and return a string as result
+- stringBuilder.reverse().toString()
+- 其实这道题和上一道题的最大区别就是，当遇到小于进制最大数值（e.g. 2或者10）的数位之后，上题可以直接return了，这道题不行
+- int result = 'a';  // implicit cast，通常只发生在int和char之间，但是返回的是asci2的数值
+- 所以，如果需要，需要用int result = '1'-'0'; 这样才能返回1
+- Integer.parse()只能搞String
 
 #### 202 Reverse bits: 给个32位非负整数，求reversed bits所对应的数值
+目前只能跳过，不太会
 
+#### 201 Number of 1 bits
+Given an integer, return how many 1 there are in the binary representation 
+- 从头开始一个个和1比较： (n>>>i & 0x1)==1?  也可以简单写成 (n>>i & 1)==1
+- 解题实质： 因为向右移动x位相当于这个数值除以2^x，相当于找出了每一个2^x位置上有几个1
+
+
+#### 84 Valid Sudoku
+- 先行跳过
 
 
 

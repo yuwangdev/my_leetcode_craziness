@@ -64,6 +64,7 @@ public class PlusOne {
                 if (number[i] + carry != 10) {
                     number[i] += carry;
                     carry = 0;
+                    return number;
 
                 } else {
 
