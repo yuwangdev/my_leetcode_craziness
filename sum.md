@@ -267,18 +267,55 @@ Find out the node of the intersection of two linked list, or return null
 #### 26 Valid Panlindrome, ignore blank space and case: 镜像对称,注意当string为null的特殊例子
 - Character.isLetterOrDigit(char)
 - string.toLowerCase()
+- string.trim(): 移除首尾的white space 
 
 #### 20 Valid parentheses
 check if the string contains complete () or []
 - stack法:时刻记住,如果遇到类似和之前的char比较的题目,stack法是个好办法
 
 #### 105 Remove duplicates from sorted linked list: so that every element is unique 
+- beforeHead法, 并且注意，删除完节点之后，不要p=p.next移动，因为这样无法保证下一个节点数值不一样
+- 遇到会要比较下一个的链表题目时，要用while(p!=null && p.next!=null)
+
+#### Roman to Integer 
+Convert roman to integer, in 1-3999。M 1000 D 500 C 100 L 50 X 10 V 5 I 1,较小的在左边相减，较小的在右边相加
+- 先比较数值大小，然后从后往前推
+
+#### Excel Sheet Column Character to Number: A:1, Z:26, AA:27
+- 在ASICII里面，@是64， A是65，a是97
+- ‘B’-’A‘ ==1
+- 给十进制数值题目的启发：从头开始，每一位，results+=n*a[i], n为进制位数
+
+#### Excel sheet column number to character 
+- 和上面题目同理，给十进制数值题目启发：while(a>0){doSth(a%n); a=a/n;} n为进制位数
+- stringBuilder.insert(position, stringOrChar); 当positon是0时，相当于一直在前面添加
+- char temp = (char) 'A'+differenceInteger 
+- 注意该题目做转换时，数值n要减去1 
+
+#### Plus one 
+- 节省代码的技巧：只要遇到不会进位的位置，相加后直接返回
+```java
+for (int i = number.length - 1; i >= 0; i--) {
+
+    number[i] = 1 + number[i];
+
+    if (number[i] == 10) {
+        number[i] = 0;
+    } else {
+        return number;
+    }
+}
+```java
+
+
+
+#### 28 Add Binary
 
 
 
 
 
-
+#### 202 Reverse bits: 给个32位非负整数，求reversed bits所对应的数值
 
 
 
