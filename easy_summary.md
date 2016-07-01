@@ -314,7 +314,7 @@ for (int i = number.length - 1; i >= 0; i--) {
         return number;
     }
 }
-```java
+```
 
 
 #### 28 Add Binary
