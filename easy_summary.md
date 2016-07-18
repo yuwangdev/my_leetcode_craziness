@@ -81,6 +81,8 @@ while (index < string.length) {
 	}
 	result.append(counter).append(string[index]);
 }
+
+- 或者用for loop时，很像compress string的解法，从i=1开始loop，把a[0]当做last，时刻更新last和counter
 ```
 
 - int --- string --- char[]
